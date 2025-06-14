@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "votechain_backend": {
+      "main": "src/votechain_backend/main.mo",
+      "type": "motoko"
+    },
+    "votechain_frontend": {
+      "dependencies": [
+        "votechain_backend"
+      ],
+      "source": [
+        "src/votechain_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "votechain_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
